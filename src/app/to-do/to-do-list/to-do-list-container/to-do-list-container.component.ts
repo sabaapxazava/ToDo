@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Task } from '../../../Shared/Modals/Task.model';
 import { TaskList } from '../../../Shared/Modals/TaskList.model';
 import { ToDoService } from 'src/app/Shared/Services/to-do.service';
@@ -29,7 +29,7 @@ export class ToDoListContainerComponent implements OnInit {
   }
   drop(event: CdkDragDrop<Task[]>) {
     if (event.previousContainer === event.container) {
-
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
       transferArrayItem(
         event.previousContainer.data,
