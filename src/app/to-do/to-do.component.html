@@ -1,0 +1,8 @@
+<section class="d-flex">
+    <aside class="col-md-2 Left">
+        <app-to-do-filler (AddTask)="OnNewTaskAdd($event)"></app-to-do-filler>
+    </aside>
+    <aside class="col-md-10 Right">
+        <app-to-do-list [TasksList]="TasksList"></app-to-do-list>
+    </aside>
+</section>

@@ -1,0 +1,51 @@
+<div class="container">
+    <h2>To do</h2>
+    <div
+      cdkDropList
+      #todoList="cdkDropList"
+      [cdkDropListData]="Tasks.ToDo"
+      [cdkDropListConnectedTo]="[doneList, inProgressList]"
+      class="list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="box box-todo" *ngFor="let item of Tasks.ToDo" cdkDrag mat-raised-button
+      [matTooltip]="item.TaskDescription"
+      matTooltipClass="example-tooltip-red"
+      aria-label="Button that shows a red tooltip">{{ item.TaskName }} <b>{{ item.TaskTime }}</b></div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h2>inProgress</h2>
+    <div
+      cdkDropList
+      #inProgressList="cdkDropList"
+      [cdkDropListData]="Tasks.InProgress"
+      [cdkDropListConnectedTo]="[doneList, todoList]"
+      class="list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="box box-inProgress" *ngFor="let item of Tasks.InProgress" cdkDrag mat-raised-button
+      [matTooltip]="item.TaskDescription"
+      matTooltipClass="example-tooltip-red"
+      aria-label="Button that shows a red tooltip">{{ item.TaskName }} <b>{{ item.TaskTime }}</b></div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h2>Done</h2>
+    <div
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="Tasks.Done"
+      [cdkDropListConnectedTo]="[todoList, inProgressList]"
+      class="list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="box box-Done" *ngFor="let item of Tasks.Done" cdkDrag mat-raised-button
+      [matTooltip]="item.TaskDescription"
+      matTooltipClass="example-tooltip-red"
+      aria-label="Button that shows a red tooltip">{{ item.TaskName }} <b>{{ item.TaskTime }}</b></div>
+    </div>
+  </div>
+  

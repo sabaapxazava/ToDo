@@ -1,0 +1,26 @@
+
+<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Date</label>
+    <select name="Day" class="form-control" [(ngModel)]="Task.TaskDate">
+        <option value="1">Mon</option>
+        <option value="2">Tue</option>
+        <option value="3">Wed</option>
+        <option value="4">Thu</option>
+        <option value="5">Fri</option>
+        <option value="6">Sat</option>
+        <option value="7">Sun</option>
+    </select>
+</div>
+<div class="mb-3">
+    <label class="form-label" >Task Name</label>
+    <input type="text" class="form-control" [(ngModel)]="Task.TaskName">
+</div>
+<div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Task Description</label>
+    <input [(ngModel)]="Task.TaskDescription" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Task Description</label>
+    <input [(ngModel)]="Task.TaskTime" class="form-control" type="time">
+</div>
+<button class="btn btn-primary" (click)="AddNewTask()">Submit</button>
