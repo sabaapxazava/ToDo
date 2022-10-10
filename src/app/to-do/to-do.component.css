@@ -1,11 +1,17 @@
 .Right{
     background-color: rgb(0, 0, 48);
+    width:100%;
 }
 .Left{
-    background-color: rgb(0, 0, 48);
+    background-color: rgb(0, 0, 48);   
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
 }
 section{
     height: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .Left, .Right{
     padding: 20px;

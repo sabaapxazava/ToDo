@@ -65,3 +65,6 @@ h2{
 .box-Done{
     background-color: green;
 }
+.main-container{
+    margin: auto;
+}

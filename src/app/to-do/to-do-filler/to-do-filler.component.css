@@ -6,3 +6,8 @@
 label{
     color:white
 }
+.maininputs{
+    padding: 70px 70px;
+    margin: auto;
+    background-color: rgb(0, 0, 82);
+}
