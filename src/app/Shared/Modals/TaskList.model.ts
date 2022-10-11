@@ -43,7 +43,6 @@ export class TaskList{
         Done: []
     }
     AddNewTask(Task:Task){
-        console.log(Task)
         switch(Number(Task.TaskDate)){
             case TaskDate.Mon:
                 switch(Task.TaskStatus){
